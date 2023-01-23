@@ -46,3 +46,4 @@ else {
 }
 
 // Stampo il prezzo finale che va messo con massimo due decimali
+document.getElementById('trainPrice').innerHTML = 'Il prezzo del biglietto è di: ' + ticketPrice.toFixed(2) + "€";
