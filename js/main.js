@@ -10,10 +10,26 @@
 // Passaggi
 // 
 // Chiedo all'utente quanti km dovrà percorrere
+let runnedKm = parseInt(prompt('Quanti km dovrai percorrere?'));
+console.log(runnedKm);
+
 // Chiedo all'utente l'età
+let userAge = parseInt(prompt('Quanti anni hai?'));
+console.log(userAge);
+
 // Imposto il prezzo del biglietto per km (0.21€)
+const ticketPricePerKm = 0.21;
+let ticketPrice = 0;
+
 // Se l'età del passeggero è minore a 18
-//      Applica uno sconto del 20%
+if (userAge < 18) {
+    ticketPrice = runnedKm * ticketPricePerKm;
+    // Applica uno sconto del 20%
+    const discountPerc = (ticketPrice / 100) * 20;
+    ticketPrice = ticketPrice - discountPerc;
+    console.log('Ticket final price ' + ticketPrice);
+}
+
 // Altrimenti se l'età del passeggero è maggiore di 65
 //      Applica uno sconto del 40%
 // Altrimenti non applicare nessuno sconto
