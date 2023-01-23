@@ -27,7 +27,7 @@ if (userAge < 18) {
     // Applica uno sconto del 20%
     const discountPerc = (ticketPrice / 100) * 20;
     ticketPrice = ticketPrice - discountPerc;
-    console.log('Ticket final price (under 18) ' + ticketPrice);
+    console.log('Ticket final price (under 18) ' + ticketPrice.toFixed(2));
 }
 
 // Altrimenti se l'età del passeggero è maggiore di 65
@@ -36,8 +36,13 @@ else if (userAge >= 65) {
     // Applica uno sconto del 40%
     const discountPerc = (ticketPrice / 100) * 40;
     ticketPrice = ticketPrice - discountPerc;
-    console.log('Ticket final price (over 65) ' + ticketPrice);
+    console.log('Ticket final price (over 65) ' + ticketPrice.toFixed(2));
 }
 
-// Altrimenti non applicare nessuno sconto
+else {
+    ticketPrice = runnedKm * ticketPricePerKm;
+    // Altrimenti non applicare nessuno sconto
+    console.log('Ticket final price (no discounts) ' + ticketPrice.toFixed(2));
+}
+
 // Stampo il prezzo finale che va messo con massimo due decimali
